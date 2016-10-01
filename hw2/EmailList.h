@@ -53,26 +53,46 @@ int emailList::length() const
 
 void emailList::add(std::string name, std::string subject, std::string message)
 {
-	emailType *t;
-	emailType * current;
-	emailType * TrailCurrent;
-	t = new emailType;
-	t->name = name;
-	t->subject = subject;
-	t->message = message;
-	t->link = NULL;
-	if (first == NULL)
+	if (NULL == first)
 	{
-		first = t;
-		last = t;
+		first = new emailType;
+		first->name = name;
+		first->subject = subject;
+		first->message = message;
+		first->link = NULL;
+		first->previous = NULL;
+		last = first;
+	}
+	else //adding node to the end of the list
+	{
+		last->link = new emailType;
+		last->link->name = name;
+		last->link->subject = subject;
+		last->link->message = message;
+		last->link->link = NULL;
+		last->link->previous = last;
+		last = last->link;
+		count++;
+	}
+		/*emailType * newNode;
+		newNode = new emailType;
+		newNode->name = name;
+		newNode->subject = subject;
+		newNode->message = message;
+		newNode->link = NULL;
+		newNode->previous = last;*/
+	/*if (NULL == first)
+	{
+		first = newNode;
+		last = newNode;
 		count++;
 	}
 	else
 	{
-		last->link = t;
-		last = t;
+		last->link = newNode;
+		last = newNode;
 		count++;
-	}
+	}*/
 }
 
 void emailList::print()

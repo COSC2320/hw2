@@ -6,4 +6,5 @@ struct  emailType
 	std::string subject;
 	std::string message;
 	emailType * link;
+	emailType * previous;
 };

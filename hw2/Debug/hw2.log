@@ -1,10 +1,8 @@
-﻿Build started 10/1/2016 1:17:19 PM.
+﻿Build started 10/1/2016 2:01:17 PM.
      1>Project "C:\Users\Larry\Documents\Visual Studio 2013\Projects\COSC 2320\hw2\hw2\hw2.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt coogsive.cpp
          coogsive.cpp
-     1>c:\users\larry\documents\visual studio 2013\projects\cosc 2320\hw2\hw2\emaillist.h(57): warning C4101: 'current' : unreferenced local variable
-     1>c:\users\larry\documents\visual studio 2013\projects\cosc 2320\hw2\hw2\emaillist.h(58): warning C4101: 'TrailCurrent' : unreferenced local variable
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Larry\Documents\Visual Studio 2013\Projects\COSC 2320\hw2\Debug\hw2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Larry\Documents\Visual Studio 2013\Projects\COSC 2320\hw2\Debug\hw2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Larry\Documents\Visual Studio 2013\Projects\COSC 2320\hw2\Debug\hw2.lib" /MACHINE:X86 Debug\coogsive.obj
          hw2.vcxproj -> C:\Users\Larry\Documents\Visual Studio 2013\Projects\COSC 2320\hw2\Debug\hw2.exe
@@ -12,4 +10,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.66
+Time Elapsed 00:00:01.35

@@ -43,7 +43,8 @@ int main(int argc, char ** argv)
 
 	emailList a;
 	//a.setFilename(filename);
-	a.setFilename("test-c.1.txt");
+	//a.setFilename("test-c.1.txt");
+	a.setFilename("test-c.2.txt");
 	a.readFileContents();
 	a.eliminateDuplicates();
 	a.eliminateCancelledReservations();

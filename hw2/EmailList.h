@@ -204,77 +204,31 @@ void emailList::deletePurchaseOrderwithCancellation(std::string name, std::strin
 {
 	emailType * trailCurrent;
 	emailType * current = address;
-	emailType * trailTemp1;
-	emailType * temp1;
-	emailType * trailTemp2;
-	emailType * temp2;
-	emailType * trailTemp3;
-	emailType * temp3;
-	while (current != NULL)
+	bool found;
+	if (current->link) //if the list has 2 nodes and they are APO and POC
 	{
-		if (current->link)
+		if (current->subject == "Approve-purchase-order") //node to be deleted is the first node
 		{
-			trailTemp1 = current;
-			temp1 = current->link;
-			trailCurrent = current;
-			current = current->link;
-			if (current->subject == "Approve-purchase-order")
+			if (current->link->subject == "Purchase-order-cancellation" && current->link->message == current->message) // if node is POC and the messages match
 			{
-				trailTemp1 = trailCurrent;
-				temp1 = current;
-				trailTemp2 = trailCurrent;
-				temp2 = current;
-				while (temp2 != NULL)
-				{
-					if (temp2->link)
-					{
-						trailTemp2 = temp2;
-						temp2 = temp2->link;
-						if (temp2->subject == "Purchase-order-cancellation" && temp2->message == current->message)
-						{
-							trailTemp3 = trailCurrent;
-							temp3 = current;
-							while (temp3 != NULL)
-							{
-								if (temp3->link && !(temp3 == temp2))
-								{
-									trailTemp3 = temp3;
-									temp3 = temp3->link;
-									if (temp3->subject == "Purchase-order-revise" && temp3->message == current->message)
-									{
-										trailCurrent->link = temp2;
-										//delete temp1;
-										//delete temp3;
-									}
-									else
-									{
-										trailCurrent->link = temp2;
-										//delete temp1;
-									}
-								}
-								else
-								{
-									temp3 = NULL;
-								}
-							}
-						}
-					}
-					else
-					{
-						temp2 = NULL;
-					}
-				}
+				first = first->link;
+				first->previous = NULL;
+				count--;
+				current = NULL;
+				delete current;
 			}
-			else
-			{
-
-			}
-		}
-		else
-		{
-			current = NULL;
 		}
 	}
+	//if (current->link->link) //if the list has 3 nodes and they are APO, POR, and POC
+	//{
+	//	if (current->subject == "Approve-purchase-order") //node to be deleted is the first node
+	//	{
+	//		if (current->link->link->subject == "Purchase-order-cancellation" && current->link->link->message == current->message) // if node is POC and the messages match
+	//		{
+
+	//		}
+	//	}
+	//}
 }
 
 void emailList::destroyList()

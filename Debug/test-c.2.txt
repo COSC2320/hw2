@@ -1,0 +1,12 @@
+Marie	Approve-purchase-order	strawberry
+Linda	Purchase-order-cancellation	strawberry
+Chris	ice-cream	vanilla
+Marie	ice-cream	strawberry-cancellation
+Sara	milk-shake	vanilla
+Meriem	ice-cream	lemon
+Ayoub	milk-shake	chocolate
+Younes	soft-cookies	vanilla
+Sophie	sweeties	sweeties
+Lisa	milk-shake	strawberry
+Ayoub	milk-shake	vanilla-cancellation
+Sophie	sweeties	sweeties

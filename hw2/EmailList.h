@@ -54,6 +54,7 @@ int emailList::length() const
 void emailList::add(std::string name, std::string subject, std::string message)
 {
 	emailType *t;
+	emailType * current;
 	t = new emailType;
 	t->name = name;
 	t->subject = subject;

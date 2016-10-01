@@ -74,25 +74,6 @@ void emailList::add(std::string name, std::string subject, std::string message)
 		last = last->link;
 		count++;
 	}
-		/*emailType * newNode;
-		newNode = new emailType;
-		newNode->name = name;
-		newNode->subject = subject;
-		newNode->message = message;
-		newNode->link = NULL;
-		newNode->previous = last;*/
-	/*if (NULL == first)
-	{
-		first = newNode;
-		last = newNode;
-		count++;
-	}
-	else
-	{
-		last->link = newNode;
-		last = newNode;
-		count++;
-	}*/
 }
 
 void emailList::print()

@@ -1,6 +1,6 @@
 #include <string>
 #include <iostream>
-#include "emailType.h"
+#include "EmailType.h"
 
 using namespace std;
 

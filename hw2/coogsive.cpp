@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 #include "TextFile.h"
-#include "emailList.h"
+#include "EmailList.h"
 
 using namespace std;
 
@@ -43,8 +43,7 @@ int main(int argc, char ** argv)
 
 	emailList a;
 	//a.setFilename(filename);
-	a.setFilename("test1-c.input1");
-	//a.setFilename("test1.txt");
+	a.setFilename("test-c.1.txt");
 	a.readFileContents();
 	a.eliminateDuplicates();
 	a.eliminateCancelledReservations();
